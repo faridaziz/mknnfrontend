@@ -1,10 +1,39 @@
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1>Data Mobil</h1>
+      <h1>Data Training</h1>
     </div>
 
-    <a href="<?= base_url('admin/mobil/tambah_mobil'); ?>" class="btn btn-primary mb-3">Tambah Data</a>
+    <div class="card-body bg-light">
+      <form action="<?= base_url('admin/dashboard/importcsv_aksi') ?>" enctype="multipart/form-data" method="post">
+        <div class="row">
+          <div class="col-lg-7 col-md-12">
+            <div class="form-group">
+              <label for="">Upload File CSV *</label>
+              <div class="custom-file mt-3">
+                <!-- <input type="text" name="file_csv"> -->
+                <input type="file" id="file_csv" name="file_csv" class="custom-file-input form-control-lg <?= form_error('file_csv') ? 'is-invalid' : ''; ?>" autofocus onchange="previewLabel()">
+                <?= form_error('file_csv', '<div class="text-small text-danger">', '</div>') ?>
+                <label class="custom-file-label cfcsv" for="file_csv">Pilih File CSV</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-1 col-md-12">
+            <div class="form-group">
+              <label for=""></label>
+              <div class="custom-file mt-4">
+                <button type="submit" class="btn btn-primary">Import</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <button type="reset" class="btn btn-warning ml-4 mt-5">Download Format CSV</button>
+            <button type="reset" class="btn btn-danger mt-5">Hapus Semua Data</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
     <?php if ($this->session->flashdata('success') != null) : ?>
       <div class="row">
         <div class="col-md-12 mx-0" id="flash" data-flash="<?= $this->session->flashdata('success'); ?>">
@@ -66,7 +95,7 @@
                           <div class="badge badge-success">Tersedia</div>
                         <?php else : ?>
                           <div class="badge badge-danger">Tidak tersedia</div>
-                        <?php endif?>
+                        <?php endif ?>
                       </td>
                       <td class="align-middle">
                         <a href="<?= base_url('admin/mobil/detail_mobil/') . $mb['id_mobil']; ?>" class="btn btn-sm btn-success" title="Lihat Mobil"><i class="fas fa-eye"></i></a>

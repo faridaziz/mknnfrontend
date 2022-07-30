@@ -1,7 +1,7 @@
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1>Data Tipe</h1>
+      <h1>Data Testing</h1>
       <div class="section-header-breadcrumb">
         <div class="breadcrumb-item text-capitalize"><?= $this->uri->segment(1) ?></div>
         <div class="breadcrumb-item text-capitalize"><?= $this->uri->segment(2) ?></div>
@@ -11,7 +11,35 @@
       </div>
     </div>
 
-    <a href="<?= base_url('admin/tipe/addTipe'); ?>" class="btn btn-primary mb-3">Tambah Data</a>
+    <div class="card-body bg-light">
+      <form action="<?= base_url('admin/dashboard/importcsv_aksi') ?>" enctype="multipart/form-data" method="post">
+        <div class="row">
+          <div class="col-lg-7 col-md-12">
+            <div class="form-group">
+              <label for="">Upload File CSV *</label>
+              <div class="custom-file mt-3">
+                <!-- <input type="text" name="file_csv"> -->
+                <input type="file" id="file_csv" name="file_csv" class="custom-file-input form-control-lg <?= form_error('file_csv') ? 'is-invalid' : ''; ?>" autofocus onchange="previewLabel()">
+                <?= form_error('file_csv', '<div class="text-small text-danger">', '</div>') ?>
+                <label class="custom-file-label cfcsv" for="file_csv">Pilih File CSV</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-1 col-md-12">
+            <div class="form-group">
+              <label for=""></label>
+              <div class="custom-file mt-4">
+                <button type="submit" class="btn btn-primary">Import</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <button type="reset" class="btn btn-warning ml-4 mt-5">Download Format CSV</button>
+            <button type="reset" class="btn btn-danger mt-5">Hapus Semua Data</button>
+          </div>
+        </div>
+      </form>
+    </div>
 
     <?php if ($this->session->flashdata('success') != null) : ?>
       <div class="row">
@@ -50,6 +78,27 @@
                     <th width="20px">
                       No.
                     </th>
+                    <th>Tweet</th>
+                    <th width="20px">
+                      No.
+                    </th>
+                    <th>Nama Tipe</th>
+                    <th>Kode Tipe</th>
+                    <th width="20px">
+                      No.
+                    </th>
+                    <th>Nama Tipe</th>
+                    <th>Kode Tipe</th>
+                    <th width="20px">
+                      No.
+                    </th>
+                    <th>Nama Tipe</th>
+                    <th>Kode Tipe</th>
+                    <th width="20px">
+                      No.
+                    </th>
+                    <th>Nama Tipe</th>
+                    <th>Kode Tipe</th>
                     <th>Nama Tipe</th>
                     <th>Kode Tipe</th>
                     <th width="180px;">Aksi</th>
@@ -60,6 +109,19 @@
                   foreach ($tipe as $tp) : ?>
                     <tr>
                       <td><?= $no++; ?></td>
+                      <td><?= $tp['kode_tipe'] ?></td>
+                      <td><?= $tp['nama_tipe'] ?></td>
+                      <td><?= $no++; ?></td>
+                      <td><?= $tp['kode_tipe'] ?></td>
+                      <td><?= $no++; ?></td>
+                      <td><?= $tp['kode_tipe'] ?></td>
+                      <td><?= $tp['nama_tipe'] ?></td>
+                      <td><?= $no++; ?></td>
+                      <td><?= $tp['kode_tipe'] ?></td>
+                      <td><?= $tp['nama_tipe'] ?></td>
+                      <td><?= $no++; ?></td>
+                      <td><?= $tp['kode_tipe'] ?></td>
+                      <td><?= $tp['nama_tipe'] ?></td>
                       <td><?= $tp['kode_tipe'] ?></td>
                       <td><?= $tp['nama_tipe'] ?></td>
                       <td class="align-middle">

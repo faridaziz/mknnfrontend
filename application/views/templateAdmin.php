@@ -35,38 +35,6 @@
                 </form>
                 <ul class="navbar-nav navbar-right">
                     <?php $jumlahUnreadContact = getJumlahUnreadContact() ?>
-                    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle <?php echo $jumlahUnreadContact != 0 ? 'beep' : '' ?>"><i class="far fa-envelope"></i></a>
-                        <div class="dropdown-menu dropdown-list dropdown-menu-right">
-                            <div class="dropdown-header">Contact Masuk</div>
-                            <div class="dropdown-list-content dropdown-list-message">
-                                <?php if ($jumlahUnreadContact == 0) :  ?>
-                                    <a href="#" class="dropdown-item dropdown-item-unread disabled">
-                                        <div class="pesan text-center">
-                                            <p>Tidak ada pesan masuk</p>
-                                        </div>
-                                    </a>
-                                <?php else : ?>
-                                    <?php $contact = getUnreadContact() ?>
-                                    <?php foreach ($contact as $c) : ?>
-                                        <a href="#" class="dropdown-item dropdown-item-unread disabled">
-                                            <div class="dropdown-item-avatar">
-                                                <img alt="image" src="<?= base_url('assets/upload/user/avatar/') . $c['avatar'] ?>" class="rounded-circle">
-
-                                            </div>
-                                            <div class="dropdown-item-desc">
-                                                <b><?php echo $c['nama'] ?></b>
-                                                <p><?php echo $c['pesan'] ?></p>
-                                                <div class="time"><?php echo  date('d F Y, H:i', strtotime($c['contact_created'])) ?></div>
-                                            </div>
-                                        </a>
-                                    <?php endforeach ?>
-                                <?php endif ?>
-                            </div>
-                            <div class="dropdown-footer text-center">
-                                <a href="<?= site_url('admin/contact'); ?>">Lihat Semua Pesan <i class="fas fa-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </li>
                     <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user" aria-expanded="false">
                             <img alt="image" src="<?= base_url('assets/upload/user/avatar/') . $this->session->userdata('avatar'); ?>" class="rounded-circle mr-1" style="width: 30px!important; height: 30px!important;">
                             <div class="d-sm-none d-lg-inline-block"><?= $this->session->userdata('nama') ?></div>

@@ -66,12 +66,6 @@
 										</button>
 									</div>
 								</form>
-								<div class="text-muted text-center mb-2">
-									Lupa Password? <a href="<?= site_url('password/lupa'); ?>"> Reset Password</a>
-								</div>
-								<div class="text-muted text-center mb-3">
-									Belum punya akun? <a href="<?= site_url('auth/register'); ?>"> Register</a>
-								</div>
 							</div>
 						</div>
 					</div>

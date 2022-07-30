@@ -5,107 +5,128 @@
       <h1>Dashboard</h1>
     </div>
     <div class="row">
-      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-        <div class="card card-statistic-1">
-          <div class="card-icon bg-secondary">
-            <i class="far fa-file"></i>
+      <div class="col-lg-3 col-md-3 col-sm-12">
+        <div class="card card-statistic-2">
+          <div class="card-stats">
+            <div class="card-stats-title">Dataset Pengujian
+            </div>
+            <div class="card-stats-items">
+              <div class="card-stats-item">
+                <div class="card-stats-item-count" style="font-size: 13px">300</div>
+                <div class="card-stats-item-label" style="font-size: 10px"><b>Positif</b></div>
+              </div>
+              <div class="card-stats-item">
+                <div class="card-stats-item-count" style="font-size: 13px">350</div>
+                <div class="card-stats-item-label" style="font-size: 10px"><b>Negativ</b></div>
+              </div>
+              <div class="card-stats-item">
+                <div class="card-stats-item-count" style="font-size: 13px">350</div>
+                <div class="card-stats-item-label" style="font-size: 10px"><b>Netral</b></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-icon shadow-primary bg-primary">
+            <i class="fas fa-file"></i>
           </div>
           <div class="card-wrap">
             <div class="card-header">
-              <h4>Total Data</h4>
+              <h4>Total Dataset</h4>
             </div>
             <div class="card-body">
-              <?= $mobil; ?>
+              1000
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-        <div class="card card-statistic-1">
-          <div class="card-icon bg-info">
-            <i class="far fa-file"></i>
+      <!-- card data train  -->
+      <div class="col-lg-3 col-md-3 col-sm-12">
+        <div class="card card-statistic-2">
+          <div class="card-stats">
+            <div class="card-stats-title">Data Training
+            </div>
+            <div class="card-stats-items">
+              <div class="card-stats-item">
+                <div class="card-stats-item-count" style="font-size: 13px">200</div>
+                <div class="card-stats-item-label" style="font-size: 10px"><b>Positif</b></div>
+              </div>
+              <div class="card-stats-item">
+                <div class="card-stats-item-count" style="font-size: 13px">200</div>
+                <div class="card-stats-item-label" style="font-size: 10px"><b>Negativ</b></div>
+              </div>
+              <div class="card-stats-item">
+                <div class="card-stats-item-count" style="font-size: 13px">200</div>
+                <div class="card-stats-item-label" style="font-size: 10px"><b>Netral</b></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-icon shadow-success bg-success">
+            <i class="fas fa-file"></i>
           </div>
           <div class="card-wrap">
             <div class="card-header">
-              <h4>Data Training</h4>
+              <h4>Total</h4>
             </div>
             <div class="card-body">
-              <?= $customer; ?>
+              600
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-        <div class="card card-statistic-1">
-          <div class="card-icon bg-primary">
-            <i class="far fa-file"></i>
+      <!-- card data testing  -->
+      <div class="col-lg-3 col-md-3 col-sm-12">
+        <div class="card card-statistic-2">
+          <div class="card-stats">
+            <div class="card-stats-title">Data Testing
+            </div>
+            <div class="card-stats-items">
+              <div class="card-stats-item">
+                <div class="card-stats-item-count" style="font-size: 13px">49</div>
+                <div class="card-stats-item-label" style="font-size: 10px"><b>Positif</b></div>
+              </div>
+              <div class="card-stats-item">
+                <div class="card-stats-item-count" style="font-size: 13px">188</div>
+                <div class="card-stats-item-label" style="font-size: 10px"><b>Negativ</b></div>
+              </div>
+              <div class="card-stats-item">
+                <div class="card-stats-item-count" style="font-size: 13px">163</div>
+                <div class="card-stats-item-label" style="font-size: 10px"><b>Netral</b></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-icon shadow-warning bg-warning">
+            <i class="fas fa-file"></i>
           </div>
           <div class="card-wrap">
             <div class="card-header">
-              <h4>Data Testing</h4>
+              <h4>Total</h4>
             </div>
             <div class="card-body">
-              <?= $laporan; ?>
+              400
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-        <div class="card card-statistic-1">
-          <div class="card-icon bg-success">
-            <i class="fas fa-random"></i>
+      <!-- card k yang digunakan -->
+      <div class="col-lg-3 col-md-3 col-sm-12">
+        <div class="card card-statistic-2">
+          <div class="card-stats">
+            <div class="card-stats-title">K Yang Digunakan
+            </div>
+            <div class="card-stats-items">
+              <div class="card-stats-item" style="width: calc(100%);">
+                <p class="mr-2">K3, K5, K7, K9, K11, K13, K15, K17, K19, K21</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-icon shadow-primary bg-primary">
+            <i class="fas fa-archive"></i>
           </div>
           <div class="card-wrap">
             <div class="card-header">
-              <h4>Hasil Positif</h4>
+              <h4>Total K</h4>
             </div>
             <div class="card-body">
-              <?= $customer; ?>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-        <div class="card card-statistic-1">
-          <div class="card-icon bg-danger">
-            <i class="fas fa-random"></i>
-          </div>
-          <div class="card-wrap">
-            <div class="card-header">
-              <h4>Hasil Negatif</h4>
-            </div>
-            <div class="card-body">
-              <?= $customer; ?>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-        <div class="card card-statistic-1">
-          <div class="card-icon bg-secondary">
-            <i class="fas fa-random"></i>
-          </div>
-          <div class="card-wrap">
-            <div class="card-header">
-              <h4>Hasil Netral</h4>
-            </div>
-            <div class="card-body">
-              <?= $customer; ?>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-        <div class="card card-statistic-1">
-          <div class="card-icon bg-success">
-            <i class="fas fa-users"></i>
-          </div>
-          <div class="card-wrap">
-            <div class="card-header">
-              <h4>Data User</h4>
-            </div>
-            <div class="card-body">
-              <?= $customer; ?>
+              10
             </div>
           </div>
         </div>
@@ -128,24 +149,47 @@
       <div class="card-body">
         <form action="<?= base_url('admin/dashboard/importcsv_aksi') ?>" enctype="multipart/form-data" method="post">
           <div class="row">
-            <div class="col-lg-6 col-md-12">
+            <div class="col-lg-10 col-md-10">
               <div class="form-group">
-                <label for="">Upload File CSV *</label>
+                <label for="">Crawling Data Tweet</label>
                 <div class="custom-file mt-3">
                   <!-- <input type="text" name="file_csv"> -->
-                  <input type="file" id="file_csv" name="file_csv" class="custom-file-input form-control-lg <?= form_error('file_csv') ? 'is-invalid' : ''; ?>" autofocus onchange="previewLabel()">
-                  <?= form_error('file_csv', '<div class="text-small text-danger">', '</div>') ?>
-                  <label class="custom-file-label cfcsv" for="file_csv">Pilih File CSV</label>
+                  <input type="text" name="keyword" class="form-control" placeholder="Ketik keyword yang dicari. ex: Windows11" value="">
                 </div>
               </div>
             </div>
+            <div class="col-lg-2 col-md-2">
+              <div class="form-group">
+                <label for=""></label>
+                <div class="coutom-file mt-4">
+                  <button type="submit" class="btn btn-primary">Crawling</button>
+                </div>
+                <!-- <button type="reset" class="btn btn-warning">Reset</button> -->
+              </div>
+            </div>
           </div>
-          <button type="submit" class="btn btn-primary">Simpan</button>
-          <button type="reset" class="btn btn-warning">Reset</button>
         </form>
       </div>
     </div>
     <div class="row">
+      <div class="col-12 col-sm-12 col-lg-12">
+        <div class="card">
+          <div class="card-header">
+            <h4>Hasil Pengujian</h4>
+          </div>
+          <div class="card-body">
+            <div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+              <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
+              </div>
+              <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
+              </div>
+            </div>
+            <canvas id="myChart2" height="219" width="366" style="display: block; width: 366px; height: 219px;" class="chartjs-render-monitor"></canvas>
+          </div>
+        </div>
+      </div>
       <div class="col-lg-6">
         <div class="card">
           <div class="card-header">
@@ -366,6 +410,107 @@
           scaleLabel: {
             display: true,
             labelString: 'Bulan'
+          }
+        }]
+      },
+    }
+  });
+</script>
+
+<script>
+  var ctx = document.getElementById("myChart2").getContext('2d');
+  var myChart2 = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ["K3", "K5", "K7", "K9", "K11", "K13", "K15", "K17", "K19", "K21"],
+      datasets: [{
+          label: 'Baik',
+          data: [
+            <?php
+            $baik = array();
+            if (count($review_baik) > 0) {
+              foreach ($review_baik as $rb) {
+                if ($rb['baik'] == null) {
+                  array_push($baik, '0' . ', ');
+                } else {
+                  array_push($baik, $rb['baik'] . ', ');
+                }
+              }
+
+              foreach ($baik as $b) {
+                echo $b;
+              }
+            }
+            ?>
+          ],
+          borderWidth: 2,
+          backgroundColor: 'rgba(63,82,227,.8)',
+          borderWidth: 0,
+          borderColor: 'transparent',
+          pointBorderWidth: 0,
+          pointRadius: 3.5,
+          pointBackgroundColor: 'transparent',
+          pointHoverBackgroundColor: 'rgba(63,82,227,.8)',
+        },
+        {
+          label: 'Jelek',
+          data: [
+            <?php
+            $jelek = array();
+            if (count($review_jelek) > 0) {
+              foreach ($review_jelek as $rj) {
+                if ($rj['jelek'] == null) {
+                  array_push($jelek, '0' . ', ');
+                } else {
+                  array_push($jelek,  $rj['jelek'] . ', ');
+                }
+              }
+
+              foreach ($jelek as $j) {
+                echo $j;
+              }
+            }
+            ?>
+          ],
+          borderWidth: 2,
+          backgroundColor: 'rgba(254,86,83,.7)',
+          borderWidth: 0,
+          borderColor: 'transparent',
+          pointBorderWidth: 0,
+          pointRadius: 3.5,
+          pointBackgroundColor: 'transparent',
+          pointHoverBackgroundColor: 'rgba(254,86,83,.8)',
+        }
+      ]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      scales: {
+        yAxes: [{
+          gridLines: {
+            // display: false,
+            drawBorder: false,
+            color: '#f2f2f2',
+          },
+          ticks: {
+            beginAtZero: true,
+            stepSize: 1,
+          },
+          scaleLabel: {
+            display: true,
+            labelString: 'Jumlah'
+          }
+        }],
+        xAxes: [{
+          gridLines: {
+            display: false,
+            tickMarkLength: 15,
+          },
+          scaleLabel: {
+            display: true,
+            labelString: 'Plat Nomor'
           }
         }]
       },
