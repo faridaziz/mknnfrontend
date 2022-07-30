@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 02, 2022 at 02:40 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 7.4.24
+-- Host: localhost
+-- Generation Time: Jul 30, 2022 at 09:43 PM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 8.0.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -61,10 +61,36 @@ INSERT INTO `contact` (`id_contact`, `id_user`, `subject`, `pesan`, `status`, `c
 CREATE TABLE `data_testing` (
   `id_testing` int(5) NOT NULL,
   `username` varchar(25) NOT NULL,
-  `tweet` text NOT NULL,
+  `tweet_kotor` text NOT NULL,
+  `tweet_bersih` text NOT NULL,
   `polaritas_awal` varchar(25) NOT NULL,
-  `polaritas_akhir` varchar(25) NOT NULL
+  `polaritas_akhir_k3` varchar(25) NOT NULL,
+  `polaritas_akhir_k5` varchar(25) NOT NULL,
+  `polaritas_akhir_k7` varchar(25) NOT NULL,
+  `polaritas_akhir_k9` varchar(25) NOT NULL,
+  `polaritas_akhir_k11` varchar(25) NOT NULL,
+  `polaritas_akhir_k13` varchar(25) NOT NULL,
+  `polaritas_akhir_k15` varchar(25) NOT NULL,
+  `polaritas_akhir_k17` varchar(25) NOT NULL,
+  `polaritas_akhir_k19` varchar(25) NOT NULL,
+  `polaritas_akhir_k21` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `data_testing`
+--
+
+INSERT INTO `data_testing` (`id_testing`, `username`, `tweet_kotor`, `tweet_bersih`, `polaritas_awal`, `polaritas_akhir_k3`, `polaritas_akhir_k5`, `polaritas_akhir_k7`, `polaritas_akhir_k9`, `polaritas_akhir_k11`, `polaritas_akhir_k13`, `polaritas_akhir_k15`, `polaritas_akhir_k17`, `polaritas_akhir_k19`, `polaritas_akhir_k21`) VALUES
+(1, 'Megaleechers', 'Ableton Live 11.1 Ableton Live is an audio sequencer and digital audio workstation for Windows and Mac OS X. Ableton Live is designed to be an instrument for live performances as well as a tool for composing, recording,… #Windows #Software https://t.co/CAYzysevwM https://t.co/8fPmAZ7pjG', 'ableton live ableton live audio sequencer digital audio workstation mac o x ableton live designed instrument live performance well tool composing recording software', 'netral', '', '', '0', '', '', '', '', '', '', ''),
+(2, 'L18______', 'Windows 11 much more secure then windows 10 #Windows #Windows11', 'much secure', 'positif', '', '', '0', '', '', '', '', '', '', ''),
+(3, 'perspectvortex', 'Just got my first BSOD in like 2 decades', 'got first bsod like decade', 'netral', '', '', '0', '', '', '', '', '', '', ''),
+(4, 'GenShakewell', '@forza_support Force Feedback in both FH4 and FH3 appears to no longer work on G920 after updating to Windows 11. Tried reinstalling ghub, repair and reset both games but still not working. Works fin FH5 and every other game.', 'force feedback fh fh appears longer work g updating tried reinstalling ghub repair reset game still working work fin fh every game', 'negatif', '', '', '0', '', '', '', '', '', '', ''),
+(5, 'peterjmsimons', 'Microsoft to test new experimental #Windows11 features https://t.co/2KLfqNrLrY by #verge Still crappy OS.', 'test new experimental feature verge still crappy o', 'negatif', '', '', '0', '', '', '', '', '', '', ''),
+(6, 'etguenni', 'Windows 11 may bricks MSSQL server instances; no longer executable https://t.co/j29GWcdexC #SQLServer #Windows11 Born\'s Tech and Windows World', 'may brick mssql server instance longer executable sqlserver born tech world', 'netral', '', '', '0', '', '', '', '', '', '', ''),
+(7, 'TightOff', 'The only hiccup in all of this: Tried to sign and send back my offer letter at lunch. My fucking scanner at home won\'t work again. My assumption is that it\'s not Windows 11 friendly. My work computer won\'t connect to our printers, so I can\'t print/sign/scan, so that\'s cool too!', 'hiccup tried sign send back offer letter lunch fucking scanner home work assumption friendly work connect printer print sign scan cool', 'negatif', '', '', '0', '', '', '', '', '', '', ''),
+(8, 'netman007', 'Being that I am a person who works in the IT field, Im slightly late to this party, but late than never', 'person work field slightly late party late never', 'negatif', '', '', '0', '', '', '', '', '', '', ''),
+(9, 'MikeHalsey', 'If you have reason to want to upgrade your copy of Windows 11 from Home to Pro, perhaps to access special features for work or to use a local account, we\'ll take you through the steps involved https://t.co/S7Iva1CyQi #Windows11 #MVPBuzz https://t.co/g9zxn2P1th', 'reason want upgrade copy home pro perhaps access special feature work use local account take step involved mvpbuzz', 'negatif', '', '', '0', '', '', '', '', '', '', ''),
+(10, 'Windows', '@JellyTotPixel We certainly do, Darren!', 'certainly darren', 'negatif', '', '', '0', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -74,8 +100,27 @@ CREATE TABLE `data_testing` (
 
 CREATE TABLE `data_training` (
   `id_training` int(5) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `tweet_kotor` text NOT NULL,
+  `tweet_bersih` text NOT NULL,
   `polaritas` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `data_training`
+--
+
+INSERT INTO `data_training` (`id_training`, `username`, `tweet_kotor`, `tweet_bersih`, `polaritas`) VALUES
+(1, 'ashishmohta', 'If you don’t like the default desktop background, you can easily change it. Read more', 'like default desktop background easily change read', 'negatif'),
+(2, 'chtsiuk', 'Ok, Ok.. Serious question what if your computers were down? It would be bad right? Read on for more https://t.co/bBRXG5BAMp #Windows #Windows10 #Windows11 #WindowsUpdates #ComputerSupport #ITSupport #Harrogate #Networking #ITServices #Tech https://t.co/PAiWwPj7y1', 'Ok, Ok.. Serious question what if your computers were down? It would be bad right? Read on for more https://t.co/bBRXG5BAMp #Windows #Windows10 #Windows11 #WindowsUpdates #ComputerSupport #ITSupport #Harrogate #Networking #ITServices #Tech https://t.co/PAiWwPj7y1', 'netral'),
+(3, 'peterjmsimons', 'Google #Chrome vs. Microsoft #Edge: Which Is the Best #Windows11 Browser? https://t.co/1vzEyyNNzu by @MUO_official', 'v best', 'positif'),
+(4, '_developr', 'Why windows 11 is cumbersome', 'cumbersome', 'negatif'),
+(5, 'ramsez_codes', 'Installed Windows 11....everything is fine...except my vertical taskbar no longer exists!!! Found one on google, but don\'t want a random script. @microsoft fix this please! I need my vertical task bar! #windows11 #verticaltaskbarislife', 'Installed Windows 11....everything is fine...except my vertical taskbar no longer exists!!! Found one on google, but don\'t want a random script. @microsoft fix this please! I need my vertical task bar! #windows11 #verticaltaskbarislife', 'netral'),
+(6, 'DavShanahan', 'onmsft: Playing Minecraft Java Edition? You’ll soon need a Microsoft account https://t.co/viojDUg6lA #Windows10 #Windows11 #Windows', 'onmsft playing minecraft java edition soon need account', 'positif'),
+(7, 'OneilyGadget', 'Windows 11 to get stickers for wallpaper and more new features soon. #Microsoft #Windows11 https://t.co/JODZrPFvuL', 'get sticker wallpaper new feature soon', 'negatif'),
+(8, 'FaelynWolff', 'I\'m not sure if this is because of #Windows11 or the recent #Radeon driver update, but what the hell is this: https://t.co/nQWllJfQVL', 'sure recent radeon driver update hell', 'netral'),
+(9, 'ITCompany_Co', 'Did you know Wallpaper stickers are being added to the Windows 11 desktop? #microsoft #windows11 #stickers https://t.co/TsOfkTdSe4', 'know wallpaper sticker added desktop sticker', 'positif'),
+(10, 'MicrosoftUAE', 'We designed #Windows11 to be the most secure Windows yet. Discover the built-in chip-to-cloud protection that supports a hybrid workplace: https://t.co/6u0UqNU1aW #HybridWork #MicrosoftSecurity https://t.co/kHv3aKH0sX', 'designed secure yet discover built chip cloud protection support hybrid workplace hybridwork microsoftsecurity', 'negatif');
 
 -- --------------------------------------------------------
 
@@ -388,13 +433,13 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `data_testing`
 --
 ALTER TABLE `data_testing`
-  MODIFY `id_testing` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_testing` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `data_training`
 --
 ALTER TABLE `data_training`
-  MODIFY `id_training` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_training` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `fitur`

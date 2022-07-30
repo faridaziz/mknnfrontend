@@ -74,18 +74,18 @@
                                         <th>Username</th>
                                         <th>Tweet Kotor</th>
                                         <th>Tweet Bersih</th>
-                                        <th>Label Awal</th>
+                                        <th>Polaritas Awal</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php $no = 1;
-                                    foreach ($mobil as $mb) : ?>
+                                    foreach ($data_testing as $mb) : ?>
                                         <tr>
                                             <td><?= $no++; ?></td>
-                                            <td><?= $mb['merek']; ?></td>
-                                            <td><?= $mb['nama_tipe']; ?></td>
-                                            <td><?= $mb['tahun']; ?></td>
-                                            <td><?= $mb['no_plat']; ?></td>
+                                            <td><?= $mb['username']; ?></td>
+                                            <td><?= $mb['tweet_kotor']; ?></td>
+                                            <td><?= $mb['tweet_bersih']; ?></td>
+                                            <td><?= $mb['polaritas_awal']; ?></td>
                                         </tr>
                                     <?php endforeach ?>
                                 </tbody>

@@ -11,6 +11,7 @@ class Data extends CI_Controller
         check_not_login(); /*pengecekan status login */
         check_admin(); /*pengecekan status level admin atau bukan */
         // load semua model yang dibutuhkan
+        $this->load->model('Data_model');
         $this->load->model('Mobil_model');
         $this->load->model('Tipe_model');
         $this->load->model('Fitur_model');
@@ -18,13 +19,13 @@ class Data extends CI_Controller
 
     public function training()
     {
-        $data['mobil'] = $this->Mobil_model->get_all_mobil();
+        $data['data_training'] = $this->Data_model->get_all_data_training();
         $this->template->load('templateAdmin', 'admin/data_training', $data);
     }
 
     public function testing()
     {
-        $data['mobil'] = $this->Mobil_model->get_all_mobil();
+        $data['data_testing'] = $this->Data_model->get_all_data_testing();
         $this->template->load('templateAdmin', 'admin/data_testing', $data);
     }
 
