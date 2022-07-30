@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 30, 2022 at 11:28 AM
+-- Generation Time: Jun 02, 2022 at 02:40 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.24
 
@@ -51,6 +51,31 @@ INSERT INTO `contact` (`id_contact`, `id_user`, `subject`, `pesan`, `status`, `c
 (5, 13, 'Halo admin', 'tanya soal cancel', '1', '2021-12-01 20:41:50', '2021-12-01 21:29:23', '13', '7'),
 (6, 13, 'Menyapa', 'Hai admin...', '0', '2021-12-23 19:24:17', NULL, '13', NULL),
 (7, 13, 'Masalah pembayaran', 'pembayaran saya gagal berkali kali', '0', '2021-12-23 20:15:44', NULL, '13', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data_testing`
+--
+
+CREATE TABLE `data_testing` (
+  `id_testing` int(5) NOT NULL,
+  `username` varchar(25) NOT NULL,
+  `tweet` text NOT NULL,
+  `polaritas_awal` varchar(25) NOT NULL,
+  `polaritas_akhir` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data_training`
+--
+
+CREATE TABLE `data_training` (
+  `id_training` int(5) NOT NULL,
+  `polaritas` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -245,8 +270,7 @@ INSERT INTO `transaksi` (`id_transaksi`, `id_user`, `id_mobil`, `tgl_rental`, `w
 (44, 13, 10, '2021/12/16', '12:30am', '2021/12/18', 'Jl. Tirto Utomo Gg.8 No.2 , Kec. Dau, Malang, Jawa Timur,', 1200000, 24000, 900000, 800000, 2924000, '2021-12-20', 'Kembali', 'Selesai', 'Struk-071221-6f66124ced.jpeg', 1, 'Arif', NULL, 'Belum Selesai', NULL, 0, '2021-12-07 10:55:53', '2021-12-20 08:04:51', '13', '7'),
 (46, 13, 6, '2021/12/22', '8:00am', '2021/12/23', 'Jl. Tirto Utomo Gg.8 No.2 , Kec. Dau, Malang, Jawa Timur,', 600000, 12000, 300000, 0, 912000, '2021-12-22', 'Kembali', 'Batal', 'Struk-201221-e91f752f34.jpg', 1, 'Arif', '2021/12/22', 'Selesai', 'Refund-221221-bffb897f74.png', 504000, '2021-12-20 08:12:17', '2021-12-22 08:25:37', '13', '7'),
 (47, 13, 6, '2021/12/28', '1:30am', '2021/12/30', 'Jl. Tirto Utomo Gg.8 No.2 , Kec. Dau, Malang, Jawa Timur,', 1200000, 24000, 900000, 0, 2124000, NULL, 'Belum Diambil', 'Belum Selesai', NULL, 0, NULL, NULL, 'Belum Selesai', NULL, 0, '2021-12-23 19:23:25', NULL, '13', NULL),
-(48, 13, 13, '2021/12/25', '7:00am', '2021/12/27', 'Joyoraharjo N0 259 b Lowokwaru Malang', 1050000, 21000, 900000, 0, 1971000, NULL, 'Belum Diambil', 'Belum Selesai', 'Struk-231221-ea0fd6a0d7.jpg', 1, 'M. Irvan Alfi Hidayat', NULL, 'Belum Selesai', NULL, 0, '2021-12-23 20:25:13', NULL, '13', NULL),
-(49, 4, 9, '2022/06/4', '1:00am', '2022/06/5', 'Jl. Satu Pekanbaru', 900000, 0, 600000, 0, 1500000, NULL, 'Belum Kembali', 'Belum Selesai', NULL, 0, NULL, NULL, 'Belum Selesai', NULL, 0, '2022-06-02 12:08:36', NULL, '4', NULL);
+(48, 13, 13, '2021/12/25', '7:00am', '2021/12/27', 'Joyoraharjo N0 259 b Lowokwaru Malang', 1050000, 21000, 900000, 0, 1971000, NULL, 'Belum Diambil', 'Belum Selesai', 'Struk-231221-ea0fd6a0d7.jpg', 1, 'M. Irvan Alfi Hidayat', NULL, 'Belum Selesai', NULL, 0, '2021-12-23 20:25:13', NULL, '13', NULL);
 
 -- --------------------------------------------------------
 
@@ -294,6 +318,18 @@ INSERT INTO `user` (`id_user`, `nama`, `username`, `email`, `alamat`, `gender`, 
 ALTER TABLE `contact`
   ADD PRIMARY KEY (`id_contact`),
   ADD KEY `id_user` (`id_user`);
+
+--
+-- Indexes for table `data_testing`
+--
+ALTER TABLE `data_testing`
+  ADD PRIMARY KEY (`id_testing`);
+
+--
+-- Indexes for table `data_training`
+--
+ALTER TABLE `data_training`
+  ADD PRIMARY KEY (`id_training`);
 
 --
 -- Indexes for table `fitur`
@@ -349,6 +385,18 @@ ALTER TABLE `contact`
   MODIFY `id_contact` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT for table `data_testing`
+--
+ALTER TABLE `data_testing`
+  MODIFY `id_testing` int(5) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `data_training`
+--
+ALTER TABLE `data_training`
+  MODIFY `id_training` int(5) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `fitur`
 --
 ALTER TABLE `fitur`
@@ -376,7 +424,7 @@ ALTER TABLE `tipe`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `user`
