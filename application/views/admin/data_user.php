@@ -53,7 +53,6 @@
                     <th>Image</th>
                     <th>Nama</th>
                     <th>Username</th>
-                    <th>Level</th>
                     <th width="50px">Action</th>
                   </tr>
                 </thead>
@@ -65,7 +64,6 @@
                       <td><img alt="image" src="<?= base_url('assets/upload/user/avatar/' . $us['avatar']); ?>" class="rounded-circle mr-1" width="30px" height="30px"></td>
                       <td><?= $us['nama']; ?></td>
                       <td><?= $us['username']; ?></td>
-                      <td><?= $us['role'] == 1 ? 'Admin' : 'Customer' ?></td>
                       <td class="align-middle">
                         <a href="<?= base_url('admin/user/updateUser/') . $us['id_user'] ?>" class="btn btn-sm btn-primary" title="Update Data"><i class="fas fa-edit"></i></a>
                         <a href="<?= base_url('admin/user/delete_user/') . $us['id_user'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?')" title="Hapus Data"><i class="fas fa-trash"></i></a>

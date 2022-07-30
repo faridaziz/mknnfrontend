@@ -1,5 +1,5 @@
 <?php
-// programmer : M. Irvan Alfi Hidayat, Oktaviano andi suryadi, Sadewa Mukti Witjaksono
+// programmer : M. Irvan Alfi Hidayat
 // terakhir update syntax : -
 
 class User extends CI_Controller

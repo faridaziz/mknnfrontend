@@ -95,10 +95,10 @@
                             </ul>
                         </li>
                         <li class="menu-header">User</li>
-                        <li class="nav-item dropdown <?= $this->uri->segment(2) == 'data_user' || $this->uri->segment(2) == 'ganti_password' ? 'active' : ''; ?>">
+                        <li class="nav-item dropdown <?= $this->uri->segment(2) == 'user' || $this->uri->segment(2) == 'ganti_password' ? 'active' : ''; ?>">
                             <a href=" #" class="nav-link has-dropdown"><i class="fas fa-random"></i> <span>User</span></a>
                             <ul class="dropdown-menu">
-                                <li class="<?= $this->uri->segment(2) == 'data_user' ? 'active' : ''; ?>">
+                                <li class="<?= $this->uri->segment(2) == 'user' ? 'active' : ''; ?>">
                                     <a class=" nav-link" href="<?= site_url('admin/user'); ?>"><i class="fas fa-users"></i> <span>Data User</span></a>
                                 </li>
                             </ul>
